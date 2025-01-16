@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxgn3i4qym65f"]
+
+[ext_resource type="Script" path="res://scenes/Loading_scene/loading_screen.gd" id="1_cub7r"]
+[ext_resource type="Texture2D" uid="uid://q7fjwvyjutt6" path="res://gfx/title/loading_frame.png" id="1_g74wp"]
+[ext_resource type="Texture2D" uid="uid://dc3fxvxpnlmri" path="res://gfx/title/loading_bar.png" id="2_0ma73"]
+
+[node name="Loading Screen" type="Control" node_paths=PackedStringArray("loadingBar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cub7r")
+loadingBar = NodePath("CenterContainer/VBoxContainer/Loading Progress")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Loading..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Loading Progress" type="TextureProgressBar" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 5)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
+texture_over = ExtResource("1_g74wp")
+texture_progress = ExtResource("2_0ma73")

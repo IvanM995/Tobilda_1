@@ -14,8 +14,8 @@ func _ready() -> void:
 
 
 func _on_new_game_bttn_pressed() -> void:
-	pass # Replace with function body.
-
+	GameManager.startNewGame()
+	Loader.loadScene(self, "res://scenes/game/game.tscn")
 
 func _on_load_game_bttn_pressed() -> void:
 	pass # Replace with function body.

@@ -11,10 +11,17 @@ config_version=5
 [application]
 
 config/name="Tubilda"
-config/version="alpha 1"
+config/description="Added: Loading screens"
+config/version="alpha 0.1.1"
 run/main_scene="res://scenes/ui/title_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Logo.png"
+
+[autoload]
+
+Loader="*res://singleton/loader.gd"
+SignalManager="*res://singleton/signalManager.gd"
+GameManager="*res://singleton/gameManager.gd"
 
 [display]
 
