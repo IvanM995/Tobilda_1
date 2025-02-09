@@ -6,5 +6,4 @@ var currentMapPath:String
 
 
 func startNewGame():
-	
 	currentMapPath = defaultMapPath

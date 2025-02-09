@@ -15,7 +15,7 @@ func loadScene(caller, path) -> void:
 	caller.queue_free()
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (_scenePath != null):
 		var progress = []
 		var loaderStauts = ResourceLoader.load_threaded_get_status(_scenePath, progress)

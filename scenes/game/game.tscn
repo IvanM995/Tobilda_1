@@ -1,25 +1,9 @@
-[gd_scene format=3 uid="uid://mp8vevx6kerk"]
+[gd_scene load_steps=2 format=3 uid="uid://mp8vevx6kerk"]
 
-[node name="Game" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_1yy7d"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 640.0
-offset_bottom = 360.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Game" type="Node" node_paths=PackedStringArray("map")]
+script = ExtResource("1_1yy7d")
+map = NodePath("Map")
 
-[node name="CenterContainer" type="CenterContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Control/CenterContainer"]
-layout_mode = 2
-text = "Game"
+[node name="Map" type="Node" parent="."]

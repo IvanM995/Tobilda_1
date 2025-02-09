@@ -21,7 +21,7 @@ config/icon="res://Logo.png"
 
 Loader="*res://singleton/loader.gd"
 SignalManager="*res://singleton/signalManager.gd"
-GameManager="*res://singleton/gameManager.gd"
+GameManager="*res://singleton/GameManager.gd"
 
 [display]
 
